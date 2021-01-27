@@ -1,26 +1,24 @@
 import java.util.*; 
 class SnakeMatrix 
 { 
-    static void print(int mat) 
-    { 
-        for (int i = 0; i < mat.length; i++) 
-        { 
-		int val = 0; 
-		if(i == 0){
-			for (int j = 0; j < mat.length; j++){
-			    	System.out.print(j); 			
-			} 
-		} else {
-			for (int j = 0; j < mat.length; j++){
-				val = (mat + i) + j ;
-			    	System.out.print(j); 			
-			}
-		} 
-        } 
-    } 
-  
-    public static void main(String[] args) 
-    {  
-        print(4); 
-    } 
+ static void print(int mat) 
+	    { 
+        	String strval = "";
+        	int count = 0 ;
+	        for (int i = 1; i <= mat; i++) 
+	        { 
+	        	int val = mat * i;
+				for (int j = 0; j < val; j++){
+					count = strval.length();
+		        	strval += count <=j ? String.valueOf(j+1) : "";
+
+				} 
+	        } 
+	        System.out.println(strval);
+	    } 
+	  
+	    public static void main(String[] args) 
+	    {  
+	        print(4); 
+	    }  
 } 
